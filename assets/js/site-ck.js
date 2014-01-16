@@ -1,5 +1,7 @@
 /* Dribbble Shots using Jribbble plugin */
 $(document).ready(function() {
+    document.body.style.overflow = 'hidden';
+    
 //     $.jribbble.getShotsByPlayerId("powdah", function(e) {
 //         var t = [];
 //         $.each(e.shots, function(e, n) {
@@ -26,7 +28,7 @@ jQuery(document).ready(function() {
     $("#hero").height($(window).height());
     $(window).resize(function() {
         $("#hero").height($(window).height());
-        $("#hero").css("min-height", "600px")
+        $("#hero").css("min-height", "360px")
     });
     $("#work").height($(window).height());
     $(window).resize(function() {
@@ -36,7 +38,7 @@ jQuery(document).ready(function() {
     $("#networks").height($(window).height());
     $(window).resize(function() {
         $("#networks").height($(window).height());
-        $("#networks").css("min-height", "600px")
+        $("#networks").css("min-height", "360px")
     })
 });
 jQuery(document).ready(function(e) {
