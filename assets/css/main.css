@@ -145,14 +145,15 @@ a:active {
 
 .down-arrow {
   position: absolute;
-  bottom: 70px;
+  content:"";
+  bottom: 30px;
   left: 50%;
   margin-left: -12px;
-  width: 250px;
-  height: 140px; 
-  background: url("../img/carrier.png") no-repeat; 
+  width: 25px;
+  height: 14px; 
+/*   background: url("../img/carrier.png") no-repeat;  */
     
-/*   background: url("../img/arrow.png") no-repeat;  */
+  background: url("../img/arrow.png") no-repeat; 
 }
 
 /* =========================
