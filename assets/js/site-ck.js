@@ -64,7 +64,7 @@ jQuery(document).ready(function() {
     $("#app").height($(window).height());
     $(window).resize(function() {
         $("#app").height($(window).height());
-        $("#app").css("max-height","360px");
+        $("#app").css("min-height","360px");
     });
     $("#networks").height($(window).height());
     $(window).resize(function() {
