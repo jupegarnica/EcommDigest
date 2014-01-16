@@ -1,26 +1,26 @@
 /* Dribbble Shots using Jribbble plugin */
 $(document).ready(function() {
-    $.jribbble.getShotsByPlayerId("powdah", function(e) {
-        var t = [];
-        $.each(e.shots, function(e, n) {
-            t.push('<li><a href="' + n.url + '">');
-            t.push('<img src="' + n.image_url + '" ');
-            t.push('alt="' + n.title + '"><span class="d-hover">' + n.title + "<p>view on dribbble</p></span></a></li>")
-        });
-        $(".slides").html(t.join(""))
-    }, {
-        page: 1,
-        per_page: 8
-    })
+//     $.jribbble.getShotsByPlayerId("powdah", function(e) {
+//         var t = [];
+//         $.each(e.shots, function(e, n) {
+//             t.push('<li><a href="' + n.url + '">');
+//             t.push('<img src="' + n.image_url + '" ');
+//             t.push('alt="' + n.title + '"><span class="d-hover">' + n.title + "<p>view on dribbble</p></span></a></li>")
+//         });
+//         $(".slides").html(t.join(""))
+//     }, {
+//         page: 1,
+//         per_page: 8
+//     })
 });
 $(function() {
-    $(".service").hover(function() {
-        $("#networks").addClass($(this).data("network")).addClass("active");
-        $("#networks p").html($(this).data("tip"))
-    }, function() {
-        $("#networks").removeClass();
-        $("#networks p").html("You can find me all over the web")
-    })
+//     $(".service").hover(function() {
+//         $("#networks").addClass($(this).data("network")).addClass("active");
+//         $("#networks p").html($(this).data("tip"))
+//     }, function() {
+//         $("#networks").removeClass();
+//         $("#networks p").html("You can find me all over the web")
+//     })
 });
 jQuery(document).ready(function() {
     $("#hero").height($(window).height());
