@@ -143,26 +143,6 @@ a:link:hover, a:visited:hover, a:active:hover {
 }
 /* =========================
 
-			WORK 
-
-   =========================*/
- #work .showcase {
-    width: 100%;
-    padding: 0px;
-}
-.showcase-tiles {
-    padding-top: 0px;
-    margin-top: 0px;
-    display: table-row;
-}
-.showcase-info {
-    display: table-row;
-}
-.showcase-info {
-    text-align: center;
-}
-/* =========================
-
 		DRIBBBLE FEED 
 
    =========================*/
@@ -300,7 +280,11 @@ ul.slides li a p {
 			hola /hero
 
    =========================*/
- .newsletter  input {
+ #hero h2 {
+    font-size:34px;
+    line-height:1;
+}
+.newsletter input {
     display: inline-block;
     vertical-align: bottom;
     text-rendering: optimizeLegibility;
@@ -311,49 +295,79 @@ ul.slides li a p {
     padding:10px 20px;
     color:#fff;
     border: 2px solid #fff;
+    min-width:320px;
+    line-height:2.2;
+    margin-bottom: 20px;
     background-color: rgba(0, 0, 0, 0);
 }
-.newsletter  input[type="submit"] {
-    border-radius:0px 4px 4px 0px;
+.newsletter input[type="submit"] {
+    border-radius:0px 15px 15px 0px;
     background-color: rgba(119, 165, 136, 0.6);
 }
-.newsletter  input[type="submit"]:hover {
+.newsletter input[type="submit"]:hover {
     background-color: rgba(119, 165, 136, 0.97);
 }
 .newsletter input[type="text"] {
-    border-radius:4px 0px 0px 4px;
-    min-width:340px;
+    border-radius:15px 0px 0px 15px;
     text-transform:lowercase;
-    margin-right: -5px;
 }
-form.newsletter  {
+form.newsletter {
     margin-top:40px;
     margin-bottom:40px;
 }
-.emailIcon {
-    /*     height:40px; */
+.hover {
+    display: inline-block;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-
+.hover:hover {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+    -webkit-animation-name: hover;
+    animation-name: hover;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+input[type="text"]:focus {
+    outline:none;
+}
+@media only screen and (max-width: 767px) {
+    .emailIcon {
+        display: none !important;
+    }
+}
 .newsletter label {
-
-margin-bottom: 5px;
-font-weight: bold;
-font-size: 12px;
-opacity: 0.5;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 12px;
+    opacity: 0.5;
 }
-
-
-
-
-
-
-.down-arrow h6 {
+.down-arrow {
+    width:400px;
+    text-align:center;
+}
+.down-arrow p {
+    font-size: 10px;
+    font-weight: 300;
     position: relative;
-    right: 9px;
-    /*     top: -33px; */
-    /*arriba de la flecha */
-    top: 10px;
-    /*abajo de la flecha*/
+    right: 200px;
+    top: 21px;
+    
 }
 ::-webkit-input-placeholder {
     color:#ccc;
