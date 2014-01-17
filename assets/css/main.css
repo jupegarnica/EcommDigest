@@ -10,11 +10,11 @@
 /* FONTS */
  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800);
  body {
-    font-family:'Open Sans', sans-serif;
+    font-family:'Open Sans', Arial, sans-serif;
     background: #f5f6f7;
     color: #f5f6f7;
     font-size: 20px;
-    line-height: 36px;
+    line-height: 1.4;
     text-align: center;
     font-weight: 300;
 }
@@ -300,44 +300,67 @@ ul.slides li a p {
 			hola /hero
 
    =========================*/
- input {
+ .newsletter  input {
     display: inline-block;
     vertical-align: bottom;
     text-rendering: optimizeLegibility;
     transition: background .15s ease;
-    text-transform:uppercase;
+    /*     text-transform:uppercase; */
     font-size: 15px;
     line-height:1.8;
     padding:10px 20px;
     color:#fff;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 4px;
     border: 2px solid #fff;
-    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0);
 }
-input[type="text"] {
+.newsletter  input[type="submit"] {
+    border-radius:0px 4px 4px 0px;
+    background-color: rgba(119, 165, 136, 0.6);
+}
+.newsletter  input[type="submit"]:hover {
+    background-color: rgba(119, 165, 136, 0.97);
+}
+.newsletter input[type="text"] {
+    border-radius:4px 0px 0px 4px;
     min-width:340px;
+    text-transform:lowercase;
+    margin-right: -5px;
 }
-form {
+form.newsletter  {
     margin-top:40px;
     margin-bottom:40px;
 }
+.emailIcon {
+    /*     height:40px; */
+}
+
+.newsletter label {
+
+margin-bottom: 5px;
+font-weight: bold;
+font-size: 12px;
+opacity: 0.5;
+}
+
+
+
+
+
+
 .down-arrow h6 {
     position: relative;
     right: 9px;
-/*     top: -33px; */    /*arriba de la flecha */
-    top: 10px; /*abajo de la flecha*/
+    /*     top: -33px; */
+    /*arriba de la flecha */
+    top: 10px;
+    /*abajo de la flecha*/
 }
-
-::-webkit-input-placeholder
-{
+::-webkit-input-placeholder {
     color:#ccc;
-}    
-
+}
 :-moz-placeholder {
     color:#ccc;
 }
-
 ::-moz-placeholder {
     color:#ccc;
 }
