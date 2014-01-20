@@ -60,6 +60,9 @@
 $(function() {
   $('.hipchat').hipChatPanel({
     url: "https://www.hipchat.com/gkkYX0llH",
-    timezone: "PST"
+    timezone: "PST",
+      showButton: false,
+      welcome: "Bienvenido, ¿Qué tal el día?"
+      
   });
 });
