@@ -10,14 +10,16 @@
   //   noframes   - Content to include when iframes are disabled in the browser; optional
   //   width      - The width of the iframe; defaults to 100%
   //   height     - The height of the iframe; defaults to 400px
+  //   showButton - Whether to show a chat button that must be pressed before showing the chat room; defaults to true
+  //   buttonTitle - The text to display on the button, if it is shown
   $.createHipChat = function (options) {
     if (options && options.url && options.container && options.timezone) {
       var $container = $(options.container);
       if ($container.length === 0) return;
       var params = {
-        anonymous: 1,
+        anonymous: true,
         timezone: options.timezone,
-        minimal: 1
+        minimal: true
       };
       if (options.welcome) {
         params.welcome_msg = options.welcome;
@@ -25,6 +27,9 @@
       var url = options.url + (options.url.indexOf('?') > 0 ? '&' : '?') + $.param(params);
       if (url.indexOf('https://') !== 0) {
         url = 'https://' + url;
+      }
+      if(options.showButton !== false){
+        options.showButton = true;
       }
       var w = options.width || '100%';
       var h = options.height || 400;
@@ -40,8 +45,12 @@
   $.fn.hipChatPanel = function (options) {
     options.container = this[0];
     var panel = $.createHipChat(options);
-    this.html('<button class="show-hipchat ' + options.buttonClasses + '">' + (options.buttonTitle || 'Chat') + '</button>')
-        .find('.show-hipchat').click(function (e) { panel.show(); });
+    if(options.showButton){
+      this.html('<button class="show-hipchat ' + options.buttonClasses + '">' + (options.buttonTitle || 'Chat') + '</button>')
+          .find('.show-hipchat').click(function (e) { panel.show(); });
+    } else {
+      panel.show();
+    }
   };
 
 }(jQuery));
@@ -50,7 +59,7 @@
 
 $(function() {
   $('.hipchat').hipChatPanel({
-    url: "http://www.hipchat.com/gkkYX0llH",
+    url: "https://www.hipchat.com/gkkYX0llH",
     timezone: "PST"
   });
 });
