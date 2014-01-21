@@ -193,6 +193,7 @@ a:link:hover, a:visited:hover, a:active:hover {
     height: 100%;
     min-height:800px;
     text-align:center;
+    padding:40px;
 }
 #tlkio {
     position:relative;
