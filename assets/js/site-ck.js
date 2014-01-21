@@ -56,16 +56,16 @@ jQuery(document).ready(function() {
         $("#hero").height($(window).height());
         $("#hero").css("min-height", "360px")
     });
-    $("#app").height($(window).height());
-    $(window).resize(function() {
-        $("#app").height($(window).height());
-        $("#app").css("min-height","360px");
-    });
-    $("#networks").height($(window).height());
-    $(window).resize(function() {
-        $("#networks").height($(window).height());
-        $("#networks").css("min-height", "360px");
-    })
+//     $("#app").height($(window).height());
+//     $(window).resize(function() {
+//         $("#app").height($(window).height());
+//         $("#app").css("min-height","360px");
+//     });
+//     $("#networks").height($(window).height());
+//     $(window).resize(function() {
+//         $("#networks").height($(window).height());
+//         $("#networks").css("min-height", "360px");
+//     });
 });
 jQuery(document).ready(function(e) {
     e(".scroll").click(function(t) {
