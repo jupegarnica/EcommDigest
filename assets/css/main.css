@@ -103,7 +103,7 @@ a:link:hover, a:visited:hover, a:active:hover {
 		SECTION STYLES 
 
    =========================*/
- #hero, #work, #networks, #app, #chat {
+ #hero, #work, .footer, #app, #chat {
     position: relative;
 }
 .hero-block, .footer-block {
@@ -117,17 +117,17 @@ a:link:hover, a:visited:hover, a:active:hover {
     width: auto;
     height: auto;
 }
-.footer-block {
+/* .footer-block {
     height: 180px;
     margin-top: -90px;
-}
+} */
 #hero {
     background: #1abc9c;
 }
 #app {
     background: #1ABC9C;
 }
-#networks {
+.footer {
     background: #474e5d;
 }
 .down-arrow {
@@ -146,26 +146,27 @@ a:link:hover, a:visited:hover, a:active:hover {
 			FOOTER 
 
    =========================*/
- #networks {
+ .footer {
     width: 100%;
     height: 100%;
-    padding-top: 200px;
+    padding-top: 100px;
+    min-height:360px;
 }
-#networks i {
+.footer i {
     font-size: 60px;
     color: white;
     padding: 18px;
 }
-#networks .dribbble:hover {
+.footer .dribbble:hover {
     color: #ed6297;
 }
-#networks .facebook:hover {
+.footer .facebook:hover {
     color: #3b5998;
 }
-#networks .twitter:hover {
+.footer .twitter:hover {
     color: #2094CA;
 }
-#networks .mail:hover {
+.footer .mail:hover {
     color: #f39c12;
 }
 /* =========================
